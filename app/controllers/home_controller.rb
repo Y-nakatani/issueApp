@@ -4,6 +4,9 @@ class HomeController < ActionController::Base
     @attendance = Attendance.all
     @course = Course.all
  end
+ def allcourse
+   @course = Course.all
+ end
 end
 
 #class DatebaseController < ActionController::Base
