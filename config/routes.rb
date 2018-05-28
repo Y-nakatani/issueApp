@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   #root 'application#hello'
   #root 'mainpage#index'
   root 'home#index'
+  #root 'home#listall'
+  get 'home/allcourse'
+  get 'home/index'
 end
