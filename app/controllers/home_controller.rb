@@ -3,6 +3,7 @@ class HomeController < ActionController::Base
   def index
     @attendance = Attendance.all
     @course = Course.all
+    
  end
  def allcourse
    @course = Course.all
