@@ -5,11 +5,23 @@
     <meta charset="UTF-8">
   </head>
 
+  <style>
+    #footer{
+      background-color: #00cccc;
+      padding: 0px;
+      margin: 0px;
+    }
+    #footerhr{
+      padding: 0px;
+      margin: 0px;
+    }
+  </style>
+
   <body>
     <center>
     <header>
       <%= link_to 'Top', 'http://localhost:3000/' %>｜
-      <a href="index.html">新規コース登録</a>｜
+      <%= link_to '新規コース追加', 'home/newcourse' %>｜
       <%= link_to 'コース一覧', 'home/allcourse' %>
     </header>
     <hr>
@@ -24,13 +36,7 @@
       <p>カテゴリー：<input type="text" name="category">
                    <input type="submit" value="検索"></p>
     </from>
-
-
-
-    <hr>
+    <hr id="footerhr">
     <div align = "right", id="footer">training.management</div>
-
-
   </body>
-
 </html>

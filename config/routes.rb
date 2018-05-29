@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   #root 'mainpage#index'
   root 'home#index'
   get 'home/allcourse'
-  get 'home/index'
+  get 'home/newcourse'
 end
