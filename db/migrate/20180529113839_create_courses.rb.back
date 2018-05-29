@@ -1,0 +1,14 @@
+class CreateCourses < ActiveRecord::Migration[5.1]
+  def change
+    create_table :courses do |t|
+      t.string :course_id
+      t.string :title
+      t.string :topic
+      t.integer :day_length
+      t.integer :level_id
+      t.string :category
+
+      t.timestamps
+    end
+  end
+end

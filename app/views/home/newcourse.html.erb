@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title="トレーニングマネージメント">
+    <meta charset="UTF-8">
+  </head>
+
+  <style>
+    #footer{
+      background-color: #00cccc;
+    }
+    #title{
+      background-color: #ccffcc;
+    }
+    #footerhr{
+      padding: 0px;
+      margin: 0px;
+    }
+  </style>
+
+  <body>
+    <center>
+    <header>
+      <%= link_to 'Top', 'http://localhost:3000/' %>｜
+      <%= link_to '新規コース追加', '' %>｜
+      <%= link_to 'コース一覧', 'allcourse' %>
+    </header>
+    <hr>
+    </center>
+    <div style="border-style: solid ; border-width: 1px;" id="title">新規コース登録</div>
+    <%= form_tag do %>
+    <p>コースID　　　：<%= text_field_tag :courseID, '', { :size => 25 } %></p>
+    <p>コースタイトル：<%= text_field_tag :courseTitle, '', { :size => 25 } %></p>
+    <p>トピック　　　：<%= text_field_tag :courseTopic, '', { :size => 25 } %></p>
+    <p>日数　　　　　：<%= text_field_tag :courseDaylength, '', { :size => 25 } %></p>
+    <p>価格　　　　　：<%= text_field_tag :coursePrice, '', { :size => 25 } %></p>
+    <p>ラベルID　 　　：<%= text_field_tag :courselevelID, '', { :size => 25 } %></p>
+    <p>カテゴリー　　：<%= text_field_tag :courseCategory, '', { :size => 25 } %></p>
+    <p><%= submit_tag '　done　' %></p>
+    <% end %>
+    <hr id="footerhr">
+    <div align = "right", id="footer">training.management</div>
+
+  </body>
+</html>

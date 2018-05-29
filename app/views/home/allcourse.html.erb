@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title="コース一覧">
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <style>
+      table {
+    	border-collapse: collapse;
+      }
+      td {
+    	border: solid 1px;
+	    padding: 0.5em;
+      }
+      #footer{
+        background-color: #00cccc;
+      }
+      #title{
+        background-color: #ccffcc;
+      }
+      #footerhr{
+        padding: 0px;
+        margin: 0px;
+      }
+    </style>
+    <center>
+    <header>
+      <%= link_to 'Top', 'http://localhost:3000/' %>｜
+      <%= link_to '新規コース追加', 'newcourse' %>｜
+      <%= link_to 'コース一覧', '' %>
+    </header>
+    </center>
+    <hr>
+    <div style="border-style: solid ; border-width: 1px;" id="title">コース一覧</div>
+    <p><table>
+      <td>コースID</td>
+      <td>コースタイトル</td>
+      <td>トピック</td>
+      <td>日数</td>
+      <td>価格</td>
+      <td>レベルID</td>
+      <td>カテゴリー</td>
+      <td>　　</td>
+      <% @course.each do |course| %>
+        <tr>
+          <td><%= course.course_id  %></td>
+          <td><%= course.course_title %></td>
+          <td><%= course.topic %></td>
+          <td><%= course.day_length%></td>
+          <td><%= course.price%></td>
+          <td><%= course.level_id%></td>
+          <td><%= course.category%></td>
+          <td><%= button_to '　delete　', { :action => "allcourse" }, :method => "delete" %></td>
+        </tr>
+      <% end %>
+
+    </table></p>
+    <p><%= link_to '戻る', 'http://localhost:3000/' %></p>
+    <hr id="footerhr">
+    <div align = "right", id="footer">training.management</div>
+  </body>
+
+</html>

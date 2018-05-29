@@ -1,13 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  def hello
-   render html: "hello, world!"
- end
+  #def index
+  #  @courses
+ #end
 end
 
 #class mainpage < ActionController::Base
 #  protect_from_forgery with: :exception
 #  def index
-#    render html: "イエエエ"
+#    render html: ""
 #  end
 #end
